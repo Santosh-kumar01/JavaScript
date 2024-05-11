@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure aur code</title>
+</head>
+<body style="background-color: aqua;">
+    <button id="orange">orange</button>
+    <button id="Green">Green</button>
+    <script>
+        /* function init(){
+            let name = "sabntosh";
+            function displayName(){
+                console.log(name);
+            }
+            displayName();
+        }
+        init */
+
+       /* function outer(){
+            let username = "santosh"
+            console.log("OUTER",secret);
+            function inner(){
+                let secret = "my1234"
+                console.log("inner",username);
+            }
+            function innerTwo(){
+                console.log("innerTwo", username);
+                console.log(secret);
+            }
+            inner()
+            innerTwo()
+        }
+        outer()
+        console.log("TOO OUTER", username);*/
+
+        /*function makeFunc(){
+            const name = "santosh";
+            function displayName(){
+                console.log(name);
+
+            }
+            return displayName;
+        }
+        const myFunc = makeFunc();
+        myFunc();*/
+
+
+
+    </script>
+    <script>
+       /* document.getElementById("orange").onclick = function(){
+            document.body.style.backgroundColor = `orange`
+        }
+        document.getElementById("Green").onclick = function(){
+            document.body.style.backgroundColor = `yellow`
+        }*/
+
+        function clickHandler(color){
+            //document.body.style.backgroundColor= `${color}`
+            return function(){
+                document.body.style.backgroundColor = `${color}`
+            }
+        }
+        document.getElementById('orange').onclick = clickHandler("orange")
+        document.getElementById('Green').onclick = clickHandler("Green")
+        
+
+    </script>
+</body>
+</html>

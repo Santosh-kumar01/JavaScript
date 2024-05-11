@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events</title>
+</head>
+<body style="background-color: aqua; color:blueviolet ">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id ="images">
+            <li><img width="200px" id="photoshop" src="https://media.istockphoto.com/id/1182464821/photo/mid-adult-male-ceo-enjoys-short-break-from-work.jpg?s=1024x1024&w=is&k=20&c=tCVp7JfHhnGt0P0WyRpghDuqjv-j1Rk3VJIhpktqISI=" alt="photoshop"></li>
+
+
+            <li><img width="200px" id="japan" src="https://cdn.pixabay.com/photo/2018/05/08/08/44/artificial-intelligence-3382507_1280.jpg" alt=""></li>
+            <li><img width="200px" id="america" src="https://media.istockphoto.com/id/537331500/photo/programming-code-abstract-technology-background-of-software-deve.jpg?s=1024x1024&w=is&k=20&c=ffZ9DMUWJuqSOgFds4ltM_71PRVfBBu5vhPznWewDOM=" alt=""></li>
+            <li><img width="200px" id="" src="https://media.istockphoto.com/id/1181008343/photo/serious-male-therapist-talks-with-patient.jpg?s=1024x1024&w=is&k=20&c=uWkTtvFOBGpAdrMwaC3hzWiTfjjJJkS-MAE-U_MHsGQ=" alt="colaage"></li>
+            <li><img width="200px" id="haldia" src="https://media.istockphoto.com/id/1408255024/photo/developers-discussing-programming-code.jpg?s=1024x1024&w=is&k=20&c=jsSmpDAw2uBeVigtxuKAWwxjX-sjJPYmUQb19vayub4=" alt="pharma"></li>
+            <li><a style="color: rgb(255, 13, 0);" href="https://www.google.com/" id="google">google</a></li>
+
+
+
+        </ul>
+    </div>
+    
+</body>
+<script>
+
+ //attechEvent()
+    //jQuery - on
+   
+
+   // document.getElementById('medical').onclick = function(){
+        //alert("medical clicked")
+   // }
+  // document.getElementById('photoshop').addEventListener('click', function(e){
+       // console.log(e);
+
+//}, true)
+
+
+/*document.getElementById('images').addEventListener('click', function(e){
+    console.log("clicked inside the ul");
+
+}, true)
+
+document.getElementById('haldia').addEventListener('click', function(e){
+    console.log("clicked on haldia");
+    e.stopPropagation()
+
+}, true)
+document.getElementById('google').addEventListener('click', function(e){
+    e.preventDefault();
+    e.stopPropagation()
+    console.log("google clicked");
+    
+}, false)*/
+
+
+//type, timestamp, defaultprevented
+//target, toElement, srcElement, currentTarget,
+//clientx, clienty, creenX, screenY
+// sltkey, ctrlkey, shiftkey, keycode
+
+document.querySelector('#images').addEventListener('click', function(e){
+    //console.log(e.target.parentNode);
+
+    console.log(e.target.tagName);
+    if(e.target.tagName === 'IMG'){
+        console.log(e.target.id);
+        let removeIt = e.target.parentNode
+        removeIt.remove()
+
+    }
+   // removeIt.parentNode.removeChild(removeIt)
+})
+      
+</script>
+</html>

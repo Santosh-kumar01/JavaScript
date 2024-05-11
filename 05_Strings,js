@@ -1,0 +1,36 @@
+const name = "santosh"
+const repoCount = 80
+
+//console.log(name + repoCount + "value");
+
+console.log('Hello my name is ${name.ToUpperCase} and my repo count is ${repoCount}');
+
+const gameName = new String('san-tos-h')
+
+// console.log(gameName[0]); 
+// console.log(gameName.__proto__);
+
+// console.log(gameName.length);
+// console.log(gameName.toUpperCase());
+console.log(gameName.charAt(0));
+console.log(gameName.indexOf('s'));
+
+const newString = gameName.substring(0,4);
+console.log(newString);
+
+const anotherString = gameName.slice(-8, 4)
+console.log(anotherString);
+
+
+const newStringOne = " santosh "
+console.log(newStringOne);
+console.log(newStringOne.trim());
+
+const url = "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim";
+
+console.log(url.replace('%20','-'));
+
+console.log(url.includes('santosh'))
+console.log(gameName.split('-'));
+
+
